@@ -144,7 +144,7 @@ There are a few different ways that drive mappings can be automated within a Win
 
 
   
-<h2>Part 3: Viewing the setting currently enabled inside a GPO​<h2>	
+<h2>Part 3: Viewing the setting currently enabled inside a GPO​</h2>	
 So far, we have been creating GPOs and putting settings into them, so we are well aware of what is happening with each of our policies. Many times, though, you enter a new environment that contains a lot of existing policies, and you may need to figure out what is happening in those policies. We have seen many cases where you install a new server, join it to the domain, and it breaks. It doesn't necessarily nose dive, but some component won't work properly or you can't flow network traffic to it for some reason. Something like that can be hard to track down. Since the issue seemed to happen during the domain join process, most would suspect that some kind of policy from an existing GPO has been applied to the new server and is having a negative effect on it. Let's take a look inside Group Policy at the easiest way to display the settings that are contained within each GPO. 
 <br />
 
@@ -175,7 +175,7 @@ Once you have ​Settings ​tab open, click on the ​show all ​link near the
 In this very simple lab, we use the Group Policy Management Console in order to view the currently configured settings inside our GPOs. This can be very useful for checking over existing settings and for comparing them against what is actually being configured on the client computers. Taking a look through this information can also help you to spot potential problems, such as duplicate settings spread across multiple GPOs. 
 <br />	
 
-<h2>Part 4: Viewing the GPOs currently assigned to a computer<h2>
+<h2>Part 4: Viewing the GPOs currently assigned to a computer</h2>
 Once you start using Group Policy to distribute settings around to many client computers, it will quickly become important to be able to view the settings and policies that have or have not been applied to specific computers. Thankfully, there is a command built right into the Windows operating system to display this information. There are a number of different switches that can be used with this command, so let's explore some of the most common ones seen and used by server administrators. 
 <br />	
 
@@ -218,7 +218,6 @@ Some prefer gpresult to view the policies that are currently applied to a comput
  
 <h2>Part 5: Backing up and restoring GPOs​</h2>
 <br />
-
 As with any piece of data in your organization, it is a good idea to keep backups of your GPOs. Keeping these backups separately from a full Domain Controller or full Active Directory backup can be advantageous, as it enables a quicker restore of individual GPOs in the event of an accidental deletion. Or perhaps you updated a GPO, but the change you made is now causing problems and you want to roll that policy back to make sure it is configured the way that it was yesterday. Whatever your reason for backing up and restoring GPOs, let's take a look at a couple of ways to accomplish each task. We will use the Group Policy Management Console to perform these functions. 
 <br />
 
