@@ -36,6 +36,7 @@ Right-click on the “Group Policy Objects” ​​folder and click on ​“Ne
 <br />	
 
 Insert a name for your new GPO. Name it “Map Network Drives”. We will end up using this GPO later. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
@@ -46,10 +47,12 @@ For this Map Network Drives policy, we want it to apply to the OU called “User
 <br />	
 
 Right-click on the OU called ​“Users”, under “New York🡪Sales” ​and then click on the option for ​“Link an Existing GPO...​. “
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Choose the name of our new GPO, “​Map Network Drives”​, and click ​“OK”​. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -68,28 +71,34 @@ Create a folder called “Sales” on the server’s Drive c: (Note that in a re
 <br />
 
 Right click on the Sales folder, select Properties from the pop-up menu.
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 On the Sales Properties window, select the “Sharing” tab, and click on the “Advanced Sharing…”, button.
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Check the “Share this folder” checkbox, and add a ‘$’ to the end of the share name in order to make this a hidden share. Then click on the “Permissions” button.
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 On the Permissions for Sales$ window, Remove the Group everyone from the Group or user names: box, and add the group “GRP_Sales_Users”. Make sure GRP_Sales_Users has “Full control” over the share. Click on the “OK” button.
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
-Back on the Advanced Sharing window, click on the OK button. 
+Back on the Advanced Sharing window, click on the OK button.
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 Back on the Sales Properties window, click on the Close button.
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -102,6 +111,7 @@ Expand the name of your domain and then expand the ​“Group Policy Objects”
 <br />
 
 Right-click on the “Map Network Drives” ​GPO and click on “​Edit...​. “
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -109,6 +119,7 @@ Navigate to ​“User Configuration ​| ​Preferences ​| ​Windows Setting
 <br />
 
 Right-click on ​“Drive Maps” ​and choose “​New ​| ​Mapped Drive​”. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -119,10 +130,12 @@ Choose a “​Drive Letter” ​to be used for this new mapping from the drop-
 <br />
 
 Click ​“OK”​. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 We are assuming you have already created the Links appropriate to where you want this GPO to apply. If so, you may now login using the Win 10 Lab VM client computer with a user that is part of the sales team. Once logged into the computer, open up “File Explorer” and you should see the new network drive mapped automatically during the login process. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -157,6 +170,7 @@ Now click on the ​Settings ​tab near the top.
 <br />
 
 Once you have ​Settings ​tab open, click on the ​show all ​link near the top right. This will display all of the settings that are currently configured inside that GPO. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />			 
  	 	 
@@ -181,6 +195,7 @@ Type ​gpresult /r​ and press Enter​. This displays all of the resultant da
 
 Now let's clean that data up a little bit. For instance, the general output we just received had information about both computer policies and user policies. Now we want to display only policies that have applied at the User level. Go ahead and use this command: 
 gpresult /r /scope:user​. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
@@ -190,7 +205,8 @@ You can use either the ​/SCOPE:USER switch or the ​​/SCOPE:COMPUTER ​swi
 And if you aren't a huge fan of looking at this data via a command prompt, never fear! There is another switch that can be used to export this data to HTML format. Try the following command:​ gpresult /h c:\gpresult.html
 <br />
 
-After running that command, browse to your​ C:​ drive and you should have a file sitting there called ​gpresult.html​. Go ahead and open that file to see your gpresult data in a web browser with a nicer look and feel. 
+After running that command, browse to your​ C:​ drive and you should have a file sitting there called ​gpresult.html​. Go ahead and open that file to see your gpresult data in a web browser with a nicer look and feel.
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
@@ -220,15 +236,18 @@ From the ​Tools ​menu of Server Manager, open up the ​Group Policy Managem
 Navigate to ​Forest ​| ​Domains ​| Your Domain Name ​| ​​Group Policy Objects​. 
 
 
-If you want to backup a single GPO, you simply right-click on the specific GPO and choose ​Back Up...​. Otherwise, it is probably more useful for us to back up the whole set of GPOs. To accomplish that, right-click on the ​Group Policy Objects ​folder and then choose Back Up All...​	​
+If you want to backup a single GPO, you simply right-click on the specific GPO and choose ​Back Up...​. Otherwise, it is probably more useful for us to back up the whole set of GPOs. To accomplish that, right-click on the ​Group Policy Objects ​folder and then choose Back Up All...​	
+​
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	 
 	 
 Specify a location where you want the backups to be saved and a description for the backup set. Then click ​Back Up​. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
 Once the backup process is complete, you should see the status of how many GPOs were successfully backed up. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
@@ -239,6 +258,7 @@ Navigate back inside the ​Group Policy Management ​Console and find the ​G
 <br />
 
 Right-click on the ​Map Network Drives ​GPO and choose ​Restore from Backup...​. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
@@ -246,6 +266,7 @@ Click ​Next ​and specify the folder where your backup files are stored. Then
 <br />
 
 As long as a backup copy of the ​Map Network Drives GPO exists in that folder, you will​	 see it in the wizard. Select that GPO and click ​Next​. 
+
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
