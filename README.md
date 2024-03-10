@@ -169,7 +169,7 @@ Now click on the ​Settings ​tab near the top.
 
 Once you have ​Settings ​tab open, click on the ​show all ​link near the top right. This will display all of the settings that are currently configured inside that GPO. 
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CqYaiKG.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />			 
  	 	 
 In this very simple lab, we use the Group Policy Management Console in order to view the currently configured settings inside our GPOs. This can be very useful for checking over existing settings and for comparing them against what is actually being configured on the client computers. Taking a look through this information can also help you to spot potential problems, such as duplicate settings spread across multiple GPOs. 
@@ -192,7 +192,7 @@ Type ​gpresult /r​ and press Enter​. This displays all of the resultant da
 Now let's clean that data up a little bit. For instance, the general output we just received had information about both computer policies and user policies. Now we want to display only policies that have applied at the User level. Go ahead and use this command: 
 gpresult /r /scope:user​. 
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/KngAqau.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
 You can use either the ​/SCOPE:USER switch or the ​​/SCOPE:COMPUTER ​switch in order to view specifically the user or computer policies applied to the system. 
@@ -203,7 +203,7 @@ And if you aren't a huge fan of looking at this data via a command prompt, never
 
 After running that command, browse to your​ C:​ drive and you should have a file sitting there called ​gpresult.html​. Go ahead and open that file to see your gpresult data in a web browser with a nicer look and feel.
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/RrOvCNL.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
 The gpresult command can be used in a variety of ways to display information about which Group Policy Objects and settings have been applied to your client computer or server. This can be especially useful when trying to determine what policies are being applied, and maybe even more helpful when trying to figure out why a particular policy hasn't been applied. If a policy is denied because of rights or permissions, you will see it in this output. This likely indicates that you have something to adjust in your Links or Security Filtering in order to get the policy applied successfully to your machine. However you decide to make use of the data for yourself, make sure to play around with the gpresult command and get familiar with its results if you intend to administer your environment using Group Policy. 
