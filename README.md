@@ -71,34 +71,40 @@ Create a folder called “Sales” on the server’s Drive c: (Note that in a re
 <br />
 
 Right click on the Sales folder, select Properties from the pop-up menu.
+<br />
 
 <img src="https://i.imgur.com/4i47bHQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 On the Sales Properties window, select the “Sharing” tab, and click on the “Advanced Sharing…”, button.
+<br />
 
 <img src="https://i.imgur.com/9ZgM7KV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Check the “Share this folder” checkbox, and add a ‘$’ to the end of the share name in order to make this a hidden share. Then click on the “Permissions” button.
 <br />
+
 <img src="https://i.imgur.com/AAlq0EG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 On the Permissions for Sales$ window, Remove the Group everyone from the Group or user names: box, and add the group “GRP_Sales_Users”. Make sure GRP_Sales_Users has “Full control” over the share. Click on the “OK” button.
 <br />
+
 <img src="https://i.imgur.com/OYqGXqr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Back on the Advanced Sharing window, click on the OK button.
 <br />
+
 <img src="https://i.imgur.com/SwHXcWo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 Back on the Sales Properties window, click on the Close button.
 <br />
+
 <img src="https://i.imgur.com/yyfuklG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -112,6 +118,7 @@ Expand the name of your domain and then expand the ​“Group Policy Objects”
 
 Right-click on the “Map Network Drives” ​GPO and click on “​Edit...​. “
 <br />
+
 <img src="https://i.imgur.com/VQYesoH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -120,6 +127,7 @@ Navigate to ​“User Configuration ​| ​Preferences ​| ​Windows Setting
 
 Right-click on ​“Drive Maps” ​and choose “​New ​| ​Mapped Drive​”. 
 <br />
+
 <img src="https://i.imgur.com/ptWh0bX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -131,11 +139,13 @@ Choose a “​Drive Letter” ​to be used for this new mapping from the drop-
 
 Click ​“OK”​. 
 <br />
+
 <img src="https://i.imgur.com/KGpuh4y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 We are assuming you have already created the Links appropriate to where you want this GPO to apply. If so, you may now login using the Win 10 Lab VM client computer with a user that is part of the sales team. Once logged into the computer, open up “File Explorer” and you should see the new network drive mapped automatically during the login process. 
 <br />
+
 <img src="https://i.imgur.com/7x0N4Nn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
