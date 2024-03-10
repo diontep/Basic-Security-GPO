@@ -82,7 +82,7 @@ On the Sales Properties window, select the “Sharing” tab, and click on the �
 
 Check the “Share this folder” checkbox, and add a ‘$’ to the end of the share name in order to make this a hidden share. Then click on the “Permissions” button.
 <br />
-<img src=https://i.imgur.com/AAlq0EG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/AAlq0EG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
