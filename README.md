@@ -81,24 +81,24 @@ On the Sales Properties window, select the “Sharing” tab, and click on the �
 <br />
 
 Check the “Share this folder” checkbox, and add a ‘$’ to the end of the share name in order to make this a hidden share. Then click on the “Permissions” button.
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 On the Permissions for Sales$ window, Remove the Group everyone from the Group or user names: box, and add the group “GRP_Sales_Users”. Make sure GRP_Sales_Users has “Full control” over the share. Click on the “OK” button.
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Back on the Advanced Sharing window, click on the OK button.
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 Back on the Sales Properties window, click on the Close button.
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -111,7 +111,7 @@ Expand the name of your domain and then expand the ​“Group Policy Objects”
 <br />
 
 Right-click on the “Map Network Drives” ​GPO and click on “​Edit...​. “
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -119,7 +119,7 @@ Navigate to ​“User Configuration ​| ​Preferences ​| ​Windows Setting
 <br />
 
 Right-click on ​“Drive Maps” ​and choose “​New ​| ​Mapped Drive​”. 
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -130,12 +130,12 @@ Choose a “​Drive Letter” ​to be used for this new mapping from the drop-
 <br />
 
 Click ​“OK”​. 
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 We are assuming you have already created the Links appropriate to where you want this GPO to apply. If so, you may now login using the Win 10 Lab VM client computer with a user that is part of the sales team. Once logged into the computer, open up “File Explorer” and you should see the new network drive mapped automatically during the login process. 
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
@@ -170,7 +170,7 @@ Now click on the ​Settings ​tab near the top.
 <br />
 
 Once you have ​Settings ​tab open, click on the ​show all ​link near the top right. This will display all of the settings that are currently configured inside that GPO. 
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />			 
  	 	 
@@ -195,7 +195,7 @@ Type ​gpresult /r​ and press Enter​. This displays all of the resultant da
 
 Now let's clean that data up a little bit. For instance, the general output we just received had information about both computer policies and user policies. Now we want to display only policies that have applied at the User level. Go ahead and use this command: 
 gpresult /r /scope:user​. 
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
@@ -206,7 +206,7 @@ And if you aren't a huge fan of looking at this data via a command prompt, never
 <br />
 
 After running that command, browse to your​ C:​ drive and you should have a file sitting there called ​gpresult.html​. Go ahead and open that file to see your gpresult data in a web browser with a nicer look and feel.
-
+<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
@@ -237,7 +237,7 @@ Navigate to ​Forest ​| ​Domains ​| Your Domain Name ​| ​​Group Pol
 
 
 If you want to backup a single GPO, you simply right-click on the specific GPO and choose ​Back Up...​. Otherwise, it is probably more useful for us to back up the whole set of GPOs. To accomplish that, right-click on the ​Group Policy Objects ​folder and then choose Back Up All...​	
-​
+​<br />
 <img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	 
 	 
