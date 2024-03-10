@@ -1,6 +1,6 @@
-</h1> Basic Security GPO</h1>
 
-<h2>Description</h2>
+
+<h2>Basic Security GPO</h2>
 In this lab we're going to use Group Policy (GPO). 
 <br />
 This lab will be split into five parts
