@@ -234,17 +234,17 @@ Navigate to ​Forest ​| ​Domains ​| Your Domain Name ​| ​​Group Pol
 
 If you want to backup a single GPO, you simply right-click on the specific GPO and choose ​Back Up...​. Otherwise, it is probably more useful for us to back up the whole set of GPOs. To accomplish that, right-click on the ​Group Policy Objects ​folder and then choose Back Up All...​	
 ​<br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/S7KvmI4.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	 
 	 
 Specify a location where you want the backups to be saved and a description for the backup set. Then click ​Back Up​. 
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ReSFutc.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
 Once the backup process is complete, you should see the status of how many GPOs were successfully backed up. 
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/53rJC1H.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
 Now that we have a backup of the GPOs, let's try to restore the GPO called ​Map Network Drives​. 
@@ -255,7 +255,7 @@ Navigate back inside the ​Group Policy Management ​Console and find the ​G
 
 Right-click on the ​Map Network Drives ​GPO and choose ​Restore from Backup...​. 
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/F9ygJiy.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
 Click ​Next ​and specify the folder where your backup files are stored. Then click ​Next again. 
@@ -263,7 +263,7 @@ Click ​Next ​and specify the folder where your backup files are stored. Then
 
 As long as a backup copy of the ​Map Network Drives GPO exists in that folder, you will​	 see it in the wizard. Select that GPO and click ​Next​. 
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/WtZpAjf.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
 Click ​Finish ​and the GPO will be restored to its previous state. 
