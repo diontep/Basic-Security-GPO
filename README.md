@@ -145,8 +145,6 @@ There are a few different ways that drive mappings can be automated within a Win
 
   
 <h2>Part 3: Viewing the setting currently enabled inside a GPO​<h2>	
-
- 
 So far, we have been creating GPOs and putting settings into them, so we are well aware of what is happening with each of our policies. Many times, though, you enter a new environment that contains a lot of existing policies, and you may need to figure out what is happening in those policies. We have seen many cases where you install a new server, join it to the domain, and it breaks. It doesn't necessarily nose dive, but some component won't work properly or you can't flow network traffic to it for some reason. Something like that can be hard to track down. Since the issue seemed to happen during the domain join process, most would suspect that some kind of policy from an existing GPO has been applied to the new server and is having a negative effect on it. Let's take a look inside Group Policy at the easiest way to display the settings that are contained within each GPO. 
 <br />
 
@@ -178,8 +176,6 @@ In this very simple lab, we use the Group Policy Management Console in order to 
 <br />	
 
 <h2>Part 4: Viewing the GPOs currently assigned to a computer<h2>
-<br />	
-	
 Once you start using Group Policy to distribute settings around to many client computers, it will quickly become important to be able to view the settings and policies that have or have not been applied to specific computers. Thankfully, there is a command built right into the Windows operating system to display this information. There are a number of different switches that can be used with this command, so let's explore some of the most common ones seen and used by server administrators. 
 <br />	
 
