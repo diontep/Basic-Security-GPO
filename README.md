@@ -37,7 +37,7 @@ Right-click on the “Group Policy Objects” ​​folder and click on ​“Ne
 
 Insert a name for your new GPO. Name it “Map Network Drives”. We will end up using this GPO later. 
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/spWPj7b.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
 Click ​“OK”​, and then expand your ​“Group Policy Objects” ​folder if it isn't already. You should see the new GPO in this list. Go ahead and click on the new GPO in order to see its settings.
@@ -48,12 +48,12 @@ For this Map Network Drives policy, we want it to apply to the OU called “User
 
 Right-click on the OU called ​“Users”, under “New York🡪Sales” ​and then click on the option for ​“Link an Existing GPO...​. “
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oSKhs30.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Choose the name of our new GPO, “​Map Network Drives”​, and click ​“OK”​. 
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oOCGZjb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Our new GPO is now linked to the ​“Users”, OU under “New York🡪Sales” ​OU, so at this level, any system placed inside that OU would get the settings. 
@@ -72,34 +72,34 @@ Create a folder called “Sales” on the server’s Drive c: (Note that in a re
 
 Right click on the Sales folder, select Properties from the pop-up menu.
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/4i47bHQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 On the Sales Properties window, select the “Sharing” tab, and click on the “Advanced Sharing…”, button.
 
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/9ZgM7KV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Check the “Share this folder” checkbox, and add a ‘$’ to the end of the share name in order to make this a hidden share. Then click on the “Permissions” button.
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src=https://i.imgur.com/AAlq0EG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 On the Permissions for Sales$ window, Remove the Group everyone from the Group or user names: box, and add the group “GRP_Sales_Users”. Make sure GRP_Sales_Users has “Full control” over the share. Click on the “OK” button.
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/OYqGXqr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Back on the Advanced Sharing window, click on the OK button.
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SwHXcWo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 
 Back on the Sales Properties window, click on the Close button.
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/yyfuklG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 To create a drive mapping in Group Policy: 
@@ -112,7 +112,7 @@ Expand the name of your domain and then expand the ​“Group Policy Objects”
 
 Right-click on the “Map Network Drives” ​GPO and click on “​Edit...​. “
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/VQYesoH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Navigate to ​“User Configuration ​| ​Preferences ​| ​Windows Settings ​| Drive Maps​”	​.
@@ -120,7 +120,7 @@ Navigate to ​“User Configuration ​| ​Preferences ​| ​Windows Setting
 
 Right-click on ​“Drive Maps” ​and choose “​New ​| ​Mapped Drive​”. 
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ptWh0bX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 Set ​“Location” ​as the destination URL (\\Server1\Sales$) of the drive mapping, and use the ​“Label as” ​field if you want a more descriptive name to be visible to users. 
@@ -131,12 +131,12 @@ Choose a “​Drive Letter” ​to be used for this new mapping from the drop-
 
 Click ​“OK”​. 
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/KGpuh4y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 We are assuming you have already created the Links appropriate to where you want this GPO to apply. If so, you may now login using the Win 10 Lab VM client computer with a user that is part of the sales team. Once logged into the computer, open up “File Explorer” and you should see the new network drive mapped automatically during the login process. 
 <br />
-<img src="https://i.imgur.com/YcQQTAe.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7x0N4Nn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
 There are a few different ways that drive mappings can be automated within a Windows environment, and our lab today outlines one of the quickest ways to accomplish this task. By using Group Policy to automate the creation of our network drive mappings, we can centralize the administration of this task and remove the drive mapping creation load from our helpdesk processes
