@@ -169,6 +169,7 @@ Now click on the ​Settings ​tab near the top.
 
 Once you have ​Settings ​tab open, click on the ​show all ​link near the top right. This will display all of the settings that are currently configured inside that GPO. 
 <br />
+
 <img src="https://i.imgur.com/CqYaiKG.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />			 
  	 	 
@@ -192,6 +193,7 @@ Type ​gpresult /r​ and press Enter​. This displays all of the resultant da
 Now let's clean that data up a little bit. For instance, the general output we just received had information about both computer policies and user policies. Now we want to display only policies that have applied at the User level. Go ahead and use this command: 
 gpresult /r /scope:user​. 
 <br />
+
 <img src="https://i.imgur.com/KngAqau.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
@@ -203,6 +205,7 @@ And if you aren't a huge fan of looking at this data via a command prompt, never
 
 After running that command, browse to your​ C:​ drive and you should have a file sitting there called ​gpresult.html​. Go ahead and open that file to see your gpresult data in a web browser with a nicer look and feel.
 <br />
+
 <img src="https://i.imgur.com/RrOvCNL.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 		 
@@ -233,15 +236,18 @@ Navigate to ​Forest ​| ​Domains ​| Your Domain Name ​| ​​Group Pol
 
 If you want to backup a single GPO, you simply right-click on the specific GPO and choose ​Back Up...​. Otherwise, it is probably more useful for us to back up the whole set of GPOs. To accomplish that, right-click on the ​Group Policy Objects ​folder and then choose Back Up All...​	
 ​<br />
+
 <img src="https://i.imgur.com/S7KvmI4.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	 
 	 
 Specify a location where you want the backups to be saved and a description for the backup set. Then click ​Back Up​. 
+​<br />
 
 <img src="https://i.imgur.com/ReSFutc.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
 
 Once the backup process is complete, you should see the status of how many GPOs were successfully backed up. 
+​<br />
 
 <img src="https://i.imgur.com/53rJC1H.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
@@ -253,6 +259,7 @@ Navigate back inside the ​Group Policy Management ​Console and find the ​G
 <br />
 
 Right-click on the ​Map Network Drives ​GPO and choose ​Restore from Backup...​. 
+​<br />
 
 <img src="https://i.imgur.com/F9ygJiy.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />	
